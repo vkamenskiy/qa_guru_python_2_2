@@ -16,7 +16,7 @@ def open_browser():
     browser.open('https://google.com/ncr')
 
 
-def test_google_dont_find_javascript(configure_browser, open_browser):
+def test_google_dont_find_result(configure_browser, open_browser):
     browser.element('[name="q"]').type('ueryuywiergggggggy333').press_enter()
-    browser.element('[id="search"]').should(have.no.text('Selene - User-oriented Web UI browser tests in Python'))
+    browser.element('[class="card-section"]')
 
